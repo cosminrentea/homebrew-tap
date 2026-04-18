@@ -1,24 +1,14 @@
 class Caffeinated < Formula
   desc "Prevent macOS sleep while specific processes are running"
   homepage "https://github.com/cosminrentea/caffeinated"
-  url "https://github.com/cosminrentea/caffeinated/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "d240f15ea528c3a0c2fc4dc13c255cdfbd048e30e8494d0b5a850152cd632464"
+  url "https://github.com/cosminrentea/caffeinated/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "b7400a5ab71323aa5de6882f51e6c87d45a155d91bb593fa8effa34e56ccbb64"
   license "MIT"
 
   def install
     bin.install "bin/caffeinated"
     (share/"caffeinated").install "share/caffeinated/watch.conf.example"
     (share/"caffeinated").install "share/caffeinated/com.caffeinated.plist"
-  end
-
-  def post_install
-    (var/"log/caffeinated").mkpath
-    conf_dir = Pathname.new("#{Dir.home}/.config/caffeinated")
-    conf_dir.mkpath
-    conf_file = conf_dir/"watch.conf"
-    unless conf_file.exist?
-      cp share/"caffeinated/watch.conf.example", conf_file
-    end
   end
 
   def caveats
