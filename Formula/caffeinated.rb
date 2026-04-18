@@ -1,8 +1,8 @@
 class Caffeinated < Formula
   desc "Prevent macOS sleep while specific processes are running"
   homepage "https://github.com/cosminrentea/caffeinated"
-  url "https://github.com/cosminrentea/caffeinated/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "b7400a5ab71323aa5de6882f51e6c87d45a155d91bb593fa8effa34e56ccbb64"
+  url "https://github.com/cosminrentea/caffeinated/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "dcb6e3e2dd372cfe75387d23f57ded4a0086136f6c291230c31a24183f077d08"
   license "MIT"
 
   def install
